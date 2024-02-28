@@ -239,14 +239,11 @@ void HuffmanTree::decode(string encoded_text, char* letters, string encoded_text
     // Decode the encoded text structure and build the Huffman tree
     this->decode2(&stam1, encoded_text, stam, letters, count);
     HuffmanNode stam5 = *this->head;
-    for (int i = 0; ; i++) {
+    for (int i = 0; encoded_text1[i] != NULL; i++) {
         // Traverse the Huffman tree using the encoded text and print the decoded characters
         if (stam5.str != "") {
             cout << stam5.str;
             stam5 = *this->head;
-        }
-        if (encoded_text1[i] == NULL) {
-            break;
         }
         if (encoded_text1[i] == '0') {
             stam5 = *stam5.left;
