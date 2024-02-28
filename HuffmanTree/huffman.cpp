@@ -13,8 +13,8 @@ using namespace std;
  * @return The count of occurrences of the character in the string
  */
 int check_how_many_t(char stam, string word) {
-	int i = 0, amount = 0;
-	for (; i < word.length(); i++) {
+	int amount = 0;
+	for (int i = 0; i < word.length(); i++) {
 		if (word[i] == stam) {
 			amount++;
 		}
